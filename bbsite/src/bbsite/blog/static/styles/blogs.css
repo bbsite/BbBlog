@@ -1,0 +1,57 @@
+.article
+{
+	padding: 10px 0;
+}
+
+.blogs-title
+{
+	display: block;
+	font: bold 18px Baskerville, ‘Times New Roman’, Times, serif;
+}
+
+.blogs-subtitle
+{
+	display: block;
+	font-size: 13px;
+	color: #444;
+	font-style: italic;
+}
+
+a.blogs-author
+{
+	font-size: 13px;
+	font-weight: bold;
+	text-decoration: none;
+	color: #587EBF;
+	display: inline;
+}
+
+.blogs-content
+{
+	clear: both;
+	margin-top: 5px;
+	display: block;
+	font-size: 15px;
+}
+
+a.blogs-readmore
+{
+	display: inline-block;
+	color: #555;
+	font-style: italic;
+	font-size: 13px;
+}
+
+.blogs-tags-header
+{
+	display: block;
+	clear: both;
+	margin-top: 10px;
+}
+
+.blogs-tags a
+{
+	display: inline-block;
+	font-size: 13px;
+	color: #555;
+}

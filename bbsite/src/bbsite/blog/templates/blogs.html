@@ -1,0 +1,42 @@
+{% extends "base-generic.html" %}
+
+{% block head %}
+<link rel="stylesheet" type="text/css" href="/static/styles/fruity.css"></link>
+<link rel="stylesheet" type="text/css" href="/static/styles/blogs.css"></link>
+{% endblock %}
+
+{% block title %}Recent Entries{% endblock %}
+
+{% block content %}
+	{% for blog in blogs %}		
+		<div class="article">
+		
+			<span class="blogs-title">
+				{{ blog.title }}
+			</span>
+			
+			<span class="blogs-subtitle">
+				Published on {{ blog.pub_date }} by 
+				<a href="" class="blogs-author">{{ blog.author }}</a>
+			</span>
+			
+			<span class="blogs-content">
+				{{ blog.content|safe|truncatewords:40 }}
+				<a href="../blog/title/{{ blog.slug }}" class="blogs-readmore">Read More...</a>
+			</span>
+			
+			<span class="blogs-tags-header">
+				Tags:			
+				<span class="blogs-tags">
+					{% for tag in blog.tags.all %}
+						{% if not forloop.first %}, {% endif %}
+						<a href="" > {{ tag.name }} </a>  
+					{% endfor %}
+				</span>
+			</span>
+		</div>
+		{% if not forloop.last %}
+			<hr />
+		{% endif %}
+	{% endfor %}
+{% endblock %}

@@ -1,0 +1,38 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+{% block head %}{% endblock %}
+<link rel="stylesheet" type="text/css" href="/static/styles/main.css"></link>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>BBSITE - {% block title %}the good stuff{% endblock %}</title>
+</head>
+<body>
+	<div id="doc-header-wrapper">
+		<div id="doc-header">
+			<div id="doc-header-title">
+				BBSITE
+			</div>
+		</div>
+	</div>
+	<div id="doc-wrapper">
+		<div id="container2">
+			<div id="container1">
+				<div id="col1">
+			    	{% block content %}{% endblock %}
+			    </div>
+				<div id="col2">
+					{% load webdesign %}
+					{% lorem 1 %}
+				</div>
+			</div>
+		</div>
+		<div id="doc-footer">
+			<div id="doc-footer-content">
+			</div>
+			<div id="doc-footer-copyright">
+				&copy; BBSITE. All Rights Reserved.
+			</div>
+		</div>
+	</div>
+</body>
+</html>
