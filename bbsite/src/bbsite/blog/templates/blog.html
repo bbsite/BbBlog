@@ -1,6 +1,7 @@
 {% extends "base-generic.html" %}
 
 {% block head %}
+<link rel="stylesheet" type="text/css" href="/static/styles/blog.css"></link>
 <link rel="stylesheet" type="text/css" href="/static/styles/fruity.css"></link>
 {% endblock %}
 
@@ -38,18 +39,11 @@
 	{% endfor %}
 	<br/>
 	{% if blog.comments_enabled %}
+		<div id="leave-comment">Leave a comment:</div>
 		{% get_comment_form for blog as form %}
-		<table>
-		  <form action="{% comment_form_target %}" method="post">
-		    {{ form }}
-		    <tr>
-		      <td colspan="2">
-		        <input type="submit" name="submit" value="Post">
-		        <input type="submit" name="preview" value="Preview">
-		      </td>
-		    </tr>
-		  </form>
-		</table>
+		<div id="comment_form">
+		    {% render_comment_form for blog %}
+		</div>
 	{% else %}
 	Comments have been disabled for this post
 	{% endif %}

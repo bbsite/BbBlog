@@ -1,0 +1,61 @@
+#comment_form form
+{
+	position: relative;
+	clear: both;
+	display: inline-block;
+	border: 1px solid #BBB;
+	padding: 5px 10px;
+	width: auto;
+}
+
+#comment_form form p label
+{
+	position: relative;
+	display: block;
+	width: 200px;
+	height: 20px;
+}
+
+#comment_form form p #id_name, 
+#comment_form form p #id_email,
+#comment_form form p #id_url
+{
+	position: relative;
+	display: inline-block;
+	width: 300px;
+	height: 20px;
+	text-align: left;
+	margin: 0 0 10px 10px;
+	padding: 0 5px;
+}
+
+#comment_form form p #id_comment
+{
+	position: relative;
+	display: block;
+	width: 300px;
+	height: 100px;
+	margin: 0 0 10px 10px;
+	padding: 5px;
+}
+
+#comment_form form p .submit-post,
+#comment_form form p .submit-preview
+{
+	position: relative;
+	display: inline-block;
+	width: auto;
+	height: 24px;
+	line-height: 20px;
+	padding: 2px 5px;
+	margin-left: 10px;
+}
+
+#leave-comment
+{
+	position: relative;
+	clear: both;
+	display: inline-block;
+	color: #777;
+	font-size: 16px;
+}

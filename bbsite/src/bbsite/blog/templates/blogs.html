@@ -12,7 +12,7 @@
 		<div class="article">
 		
 			<span class="blogs-title">
-				{{ blog.title }}
+				<a href="../blog/title/{{ blog.slug }}">{{ blog.title }}</a>
 			</span>
 			
 			<span class="blogs-subtitle">
@@ -21,7 +21,7 @@
 			</span>
 			
 			<span class="blogs-content">
-				{{ blog.content|safe|truncatewords:40 }}
+				{{ blog.content|safe|truncatewords_html:40 }}
 				<a href="../blog/title/{{ blog.slug }}" class="blogs-readmore">Read More...</a>
 			</span>
 			
@@ -29,8 +29,7 @@
 				Tags:			
 				<span class="blogs-tags">
 					{% for tag in blog.tags.all %}
-						{% if not forloop.first %}, {% endif %}
-						<a href="" > {{ tag.name }} </a>  
+						<a href="">{{ tag.name }}</a>{% if not forloop.last %}, {% endif %}
 					{% endfor %}
 				</span>
 			</span>

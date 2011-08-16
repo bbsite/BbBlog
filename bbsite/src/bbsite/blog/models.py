@@ -3,7 +3,7 @@ from django.contrib.auth.models import User
 from taggit.managers import TaggableManager
 
 from pygments import highlight
-from pygments.lexers import PythonLexer
+from pygments.lexers import get_lexer_by_name
 from pygments.formatters import HtmlFormatter
 from BeautifulSoup import BeautifulSoup
 
@@ -45,8 +45,11 @@ class BlogEntry(models.Model):
         soup = BeautifulSoup(self.editable_content)
         python_code = soup.findAll("code", "python")
         
+        lexer = get_lexer_by_name("python", stripall=True)
+        formatter = HtmlFormatter()
+        
         for code in python_code:
-            code.replaceWith(highlight(code.string, PythonLexer(), HtmlFormatter()))            
+            code.replaceWith(highlight(code.string, lexer, formatter))         
             
         return str(soup)
     

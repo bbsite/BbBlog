@@ -2,7 +2,7 @@
 {
 	margin: 0px;
 	padding: 0px;
-	font-family: 'Reader Regular', 'Helvetica Neue', Arial, Helvetica, sans-serif;;
+	font-family: 'Reader Regular', 'Helvetica Neue', Arial, Helvetica, sans-serif;
 	font-size: 15px;
 	color: #222;
 }
@@ -17,7 +17,7 @@ body
 	position: relative;
 	background: #444;
 	width: 100%;
-	height: 110px;
+	height: 125px;
 	border-bottom: 2px solid #333;
 }
 
@@ -25,12 +25,12 @@ body
 {
 	position: relative;
 	float: left;
-	background: #587EBF;
+	background: #222;
 	width: 100%;
-	height: 75px;
+	height: 85px;
 	margin-top: 25px;
-	border-bottom: 1px solid #3B5480;
-	border-top: 1px solid #76A7FF;
+	border-bottom: 2px solid #666;
+	border-top: 1px solid #888;
 	border-left: 0px;
 	border-right: 0px;
 }
@@ -40,7 +40,7 @@ body
 	position: relative;
 	width: 1000px;
 	height: 40px;
-	padding: 15px 0 20px 0;
+	padding: 20px 0 20px 0;
 	margin: 0 auto;
 	line-height: 40px;
 	font: 40px Baskerville, ‘Times New Roman’, Times, serif;
@@ -100,9 +100,9 @@ body
 #doc-footer
 {
 	position: relative;
-	background: #96BF58;
+	background: #0D2F5E;
 	clear: both;
-	border: 1px solid #64803B;
+	border: 1px solid #071933;
 	border-left: 0px;
 	border-right: 0px;
 	height: 80px;
@@ -126,5 +126,6 @@ body
 	width: auto;
 	text-align: center;
 	font-family: Baskerville, ‘Times New Roman’, Times, serif;
+	color: #EEE;
 }
 
