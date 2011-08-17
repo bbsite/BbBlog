@@ -15,7 +15,8 @@ body
 #doc-header-wrapper
 {
 	position: relative;
-	background: #C3D2DB;
+	background: #92CD00;
+	/*background: #C3D2DB;*/
 	/*background: #BAE09D;*/
 	width: 100%;
 	height: 125px;
@@ -26,7 +27,8 @@ body
 {
 	position: relative;
 	float: left;
-	background: #E8E8E8;
+	background: #2C6700;
+	/*background: #E8E8E8;*/
 	width: 100%;
 	height: 85px;
 	margin-top: 25px;
@@ -105,7 +107,8 @@ body
 #doc-footer
 {
 	position: relative;
-	background: #C3D2DB;
+	background: #2C6700;
+	/*background: #C3D2DB;*/
 	clear: both;
 	border: 1px solid #777;
 	border-left: 0px;
