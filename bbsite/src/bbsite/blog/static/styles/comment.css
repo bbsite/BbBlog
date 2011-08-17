@@ -1,0 +1,75 @@
+#comment_form form
+{
+	position: relative;
+	clear: both;
+	display: inline-block;
+	border: 1px solid #BBB;
+	padding: 5px 10px;
+	width: auto;
+	background: #F6F6F6;
+}
+
+#comment_form form p label
+{
+	position: relative;
+	display: block;
+	width: 200px;
+	height: 20px;
+}
+
+#comment_form form p #id_name, 
+#comment_form form p #id_email,
+#comment_form form p #id_url
+{
+	position: relative;
+	display: inline-block;
+	width: 300px;
+	height: 20px;
+	text-align: left;
+	margin: 0 0 10px 10px;
+	padding: 0 5px;
+	border: 1px solid #CCC;
+	outline: none;
+}
+
+#comment_form form p #id_comment
+{
+	position: relative;
+	display: block;
+	width: 300px;
+	height: 100px;
+	margin: 0 0 10px 10px;
+	padding: 5px;
+	border: 1px solid #CCC;
+	outline: none;
+}
+
+#comment_form form p #id_name:focus, 
+#comment_form form p #id_email:focus,
+#comment_form form p #id_url:focus,
+#comment_form form p #id_comment:focus
+{
+	border: 1px solid #9FB2BF;	
+}
+
+#comment_form form p .submit-post,
+#comment_form form p .submit-preview
+{
+	position: relative;
+	float: right;
+	display: inline-block;
+	width: auto;
+	height: 24px;
+	line-height: 20px;
+	padding: 2px 5px;
+	margin-left: 10px;
+}
+
+#leave-comment
+{
+	position: relative;
+	clear: both;
+	display: inline-block;
+	color: #777;
+	font-size: 16px;
+}

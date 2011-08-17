@@ -1,61 +1,105 @@
-#comment_form form
+.blog-title
 {
-	position: relative;
-	clear: both;
-	display: inline-block;
-	border: 1px solid #BBB;
-	padding: 5px 10px;
-	width: auto;
-}
-
-#comment_form form p label
-{
-	position: relative;
 	display: block;
-	width: 200px;
-	height: 20px;
+	font-size: 28px;
+	font-weight: bold;
+	text-decoration: none;
+	color: #A00;
 }
 
-#comment_form form p #id_name, 
-#comment_form form p #id_email,
-#comment_form form p #id_url
+.blog-subtitle
 {
-	position: relative;
-	display: inline-block;
-	width: 300px;
-	height: 20px;
-	text-align: left;
-	margin: 0 0 10px 10px;
-	padding: 0 5px;
-}
-
-#comment_form form p #id_comment
-{
-	position: relative;
 	display: block;
-	width: 300px;
-	height: 100px;
-	margin: 0 0 10px 10px;
-	padding: 5px;
-}
-
-#comment_form form p .submit-post,
-#comment_form form p .submit-preview
-{
-	position: relative;
-	display: inline-block;
-	width: auto;
-	height: 24px;
-	line-height: 20px;
-	padding: 2px 5px;
-	margin-left: 10px;
-}
-
-#leave-comment
-{
-	position: relative;
-	clear: both;
-	display: inline-block;
+	font-size: 13px;
 	color: #777;
-	font-size: 16px;
+	font-style: italic;
+}
+
+a.blog-author
+{
+	font-size: 13px;
+	font-weight: bold;
+	text-decoration: none;
+	color: #0D2F5E;
+	display: inline;
+}
+
+a.blog-author:hover
+{
+	color: #1B62C4;
+}
+
+.blog-content
+{
+	clear: both;
+	margin-top: 10px;
+	display: block;
+	font-size: 15px;
+	padding: 15px 5px;
+	border: 1px solid #DDD;
+	border-right: 1px solid #AAA;
+	border-bottom: 1px solid #AAA;
+	/*border-radius: 5px;*/
+}
+
+.blog-tags-header
+{
+	display: block;
+	clear: both;
+	margin-top: 10px;
+}
+
+.blog-tags-title
+{
+	color: #555;
+}
+
+.blog-tags a
+{
+	display: inline-block;
+	font-size: 13px;
+	color: #1B62C4;	
+	padding: 4px;
+	background: #E9E9E9;
+	border-radius: 4px;
+}
+
+.blog-tags a:hover
+{
+	background: #C8DCE9;
+	color: #144991;
+}
+
+.comment-count
+{
+	position: relative;
+	display: block;
+	margin: 15px 0;
+	padding: 15px 0 0 0;
+	border-top: 2px solid #555;
+}
+
+.comment-poster
+{
+	display: block;
+	font-size: 13px;
+	color: #777;
+	font-style: italic;
+}
+
+.comment-author
+{
+	color: #444;
+	font-weight: bold;
+}
+
+.comment-post
+{
+	position: relative;
+	display: block;
+	width: 740px;
+	margin: 5px 0 10px 10px;
+	padding: 10px;
+	border: 1px solid #CCC;
+	background: #EEE;
 }

@@ -1,20 +1,24 @@
 .article
 {
-	padding: 10px 0;
+	padding: 0 0 10px 0;
+	margin: 0 0 5px 0;
+	border-bottom: 2px solid #555;
 }
 
 .blogs-title a
 {
-	display: block;
-	font: bold 25px Baskerville, ‘Times New Roman’, Times, serif;
+	display: inline-block;
+	font-size: 28px;
+	font-weight: bold;
 	text-decoration: none;
+	color: #A00;
 }
 
 .blogs-subtitle
 {
 	display: block;
 	font-size: 13px;
-	color: #444;
+	color: #777;
 	font-style: italic;
 }
 
@@ -25,7 +29,11 @@ a.blogs-author
 	text-decoration: none;
 	color: #0D2F5E;
 	display: inline;
-	font-style: normal;
+}
+
+a.blogs-author:hover
+{
+	color: #1B62C4;
 }
 
 .blogs-content
@@ -34,6 +42,11 @@ a.blogs-author
 	margin-top: 10px;
 	display: block;
 	font-size: 15px;
+	border: 1px solid #DDD;
+	border-right: 1px solid #AAA;
+	border-bottom: 1px solid #AAA;
+	padding: 15px 5px;
+	/*border-radius: 5px;*/
 }
 
 a.blogs-readmore
@@ -51,19 +64,28 @@ a.blogs-readmore:hover
 
 .blogs-tags-header
 {
-	display: block;
+	position: relative;
+	display: inline-block;
 	clear: both;
 	margin-top: 10px;
+}
+
+.blogs-tags-title
+{
+	color: #555;
 }
 
 .blogs-tags a
 {
 	display: inline-block;
 	font-size: 13px;
-	color: #555;
+	color: #1B62C4;	
+	padding: 4px;
+	background: #E9E9E9;
+	border-radius: 4px;
 }
-
 .blogs-tags a:hover
 {
-	color: #587EBF;
+	background: #C8DCE9;
+	color: #144991;
 }

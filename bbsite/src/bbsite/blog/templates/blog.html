@@ -2,42 +2,63 @@
 
 {% block head %}
 <link rel="stylesheet" type="text/css" href="/static/styles/blog.css"></link>
+<link rel="stylesheet" type="text/css" href="/static/styles/comment.css"></link>
 <link rel="stylesheet" type="text/css" href="/static/styles/fruity.css"></link>
 {% endblock %}
 
 {% block title %}{{ blog.title }}{% endblock %}
 
 {% block content %}
-	Written by {{ blog.author }} on {{ blog.pub_date|date:"l F dS, Y" }} at {{ blog.pub_date|date:"g:i A" }}<br/>
-	{{ blog.last_edit_date }} -- {{ blog.editor }} <br/>
-	{% for status in blog.PUB_STATUS %}
-		{% ifequal status.0 blog.status %}
-			{{ status.1 }}
-		{% endifequal %}
-	{% endfor %} <br/>
-	{{ blog.comments_enabled }}
-	&nbsp;&nbsp;{{ blog.content|safe }} <br/><br/>
-	{% for tag in blog.tags.all %}
-	{{ tag.name }} 
-	{% endfor %}
+	<span class="blog-title">
+		{{ blog.title }}
+	</span>
 	
-	<br/>
-	{% load comments %}	
+	<span class="blog-subtitle">
+		Published {{ blog.pub_date|date:"l F dS, Y \a\t g:i A" }} by 
+		<a href="" class="blog-author">{{ blog.author }}</a>
+	</span>
+	
+	{{ blog.last_edit_date }} -- {{ blog.editor }} <br/>
+
+	<span class="blog-content">
+		{{ blog.content|safe }}
+	</span>
+
+	<span class="blog-tags-header">
+		<span class="blog-tags-title">
+			Tagged:
+		</span>
+		<span class="blog-tags">
+			{% for tag in blog.tags.all %}
+				<a href="">{{ tag.name }}</a>{% if not forloop.last %}, {% endif %}
+			{% endfor %}
+		</span>
+	</span>
+	
+	{% load comments %}
 	{% get_comment_count for blog as comment_count %}
-	There 
-	{% ifequal comment_count 1 %} is {% else %} are {% endifequal %}
-	{{ comment_count }} comment{{ comment_count|pluralize }} for this post:
-	<br/>
+	{% get_comment_list for blog as comments %}
+	
+	<span class="comment-count">
+		{% load humanize %}
+		
+		There {% ifequal comment_count 1 %} is {% else %} are {% endifequal %}
+		{{ comment_count|apnumber }} comment{{ comment_count|pluralize }} for this post:
+	</span>
+	
 	{% get_comment_list for blog as comments %}
 	{% for comment in comments %}
 		{% if not comment.is_removed and comment.is_public %}
-			by {{ comment.user_name }} on {{ comment.submit_date|date:"l F dS, Y"  }} at {{ comment.submit_date|date:"g:i A" }}: <br/>
-			{{ comment.comment }}
-			{{ comment.id }}
-			<br/>
+			<span class="comment-poster">
+				by <span class="comment-author">{{ comment.user_name }}</span> on {{ comment.submit_date|date:"l F dS, Y"  }} at {{ comment.submit_date|date:"g:i A" }}: <br/>
+			</span>
+			<span class="comment-post">
+				{{ comment.comment }}
+			</span>
 		{% endif %}
 	{% endfor %}
 	<br/>
+	
 	{% if blog.comments_enabled %}
 		<div id="leave-comment">Leave a comment:</div>
 		{% get_comment_form for blog as form %}

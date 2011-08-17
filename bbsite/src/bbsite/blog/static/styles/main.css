@@ -9,42 +9,48 @@
 
 body
 {
-	background: #DDD;	
+	background: #E8E8E8;	
 }
 
 #doc-header-wrapper
 {
 	position: relative;
-	background: #444;
+	background: #C3D2DB;
+	/*background: #BAE09D;*/
 	width: 100%;
 	height: 125px;
-	border-bottom: 2px solid #333;
+	border-bottom: 1px solid #BBB;
 }
 
 #doc-header
 {
 	position: relative;
 	float: left;
-	background: #222;
+	background: #E8E8E8;
 	width: 100%;
 	height: 85px;
 	margin-top: 25px;
-	border-bottom: 2px solid #666;
-	border-top: 1px solid #888;
+	border-top: 1px solid #AAA;
+	border-bottom: 1px solid #BBB;
 	border-left: 0px;
 	border-right: 0px;
 }
 
-#doc-header-title
+#doc-header-title, #doc-header-title #inner
 {
 	position: relative;
 	width: 1000px;
 	height: 40px;
-	padding: 20px 0 20px 0;
+	padding: 10px 0 20px 0;
 	margin: 0 auto;
 	line-height: 40px;
-	font: 40px Baskerville, ‘Times New Roman’, Times, serif;
-	color: #EEE;
+	font: bold 55px Baskerville, ‘Times New Roman’, Times, serif;
+	color: #555F66;
+}
+
+#doc-header-title #inner
+{
+	color: #111;
 }
 
 #doc-wrapper
@@ -52,11 +58,10 @@ body
 	position: relative;
 	clear: both;
 	background: #FFF;
-	margin: 0 auto;
+	margin: 10px auto;
 	width: 1000px;
 	border: 1px solid #777;
-	border-top: 0px;
-	border-bottom: 0px;
+	box-shadow: 1px 1px 2px #888;
 }
 
 /* from http://matthewjamestaylor.com/blog/equal-height-columns-cross-browser-css-no-hacks */
@@ -74,7 +79,7 @@ body
 	float: left;
 	width: 1000px;
 	right: 200px;
-	border-right: 2px solid #AAA;
+	border-right: 2px solid #777;
 }
 
 #col1
@@ -100,9 +105,9 @@ body
 #doc-footer
 {
 	position: relative;
-	background: #0D2F5E;
+	background: #C3D2DB;
 	clear: both;
-	border: 1px solid #071933;
+	border: 1px solid #777;
 	border-left: 0px;
 	border-right: 0px;
 	height: 80px;
@@ -126,6 +131,5 @@ body
 	width: auto;
 	text-align: center;
 	font-family: Baskerville, ‘Times New Roman’, Times, serif;
-	color: #EEE;
 }
 

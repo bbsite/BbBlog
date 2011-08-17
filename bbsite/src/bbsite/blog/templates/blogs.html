@@ -16,17 +16,19 @@
 			</span>
 			
 			<span class="blogs-subtitle">
-				Published on {{ blog.pub_date }} by 
+				Published {{ blog.pub_date|date:"F dS, Y" }} by 
 				<a href="" class="blogs-author">{{ blog.author }}</a>
 			</span>
 			
 			<span class="blogs-content">
-				{{ blog.content|safe|truncatewords_html:40 }}
-				<a href="../blog/title/{{ blog.slug }}" class="blogs-readmore">Read More...</a>
+				{{ blog.content|safe|truncatewords_html:100 }}
+				<a href="../blog/title/{{ blog.slug }}" class="blogs-readmore">Read more...</a>
 			</span>
 			
 			<span class="blogs-tags-header">
-				Tags:			
+				<span class="blogs-tags-title">
+					Tagged:
+				</span>			
 				<span class="blogs-tags">
 					{% for tag in blog.tags.all %}
 						<a href="">{{ tag.name }}</a>{% if not forloop.last %}, {% endif %}
@@ -34,8 +36,5 @@
 				</span>
 			</span>
 		</div>
-		{% if not forloop.last %}
-			<hr />
-		{% endif %}
 	{% endfor %}
 {% endblock %}
