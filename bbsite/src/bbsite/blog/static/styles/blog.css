@@ -93,7 +93,19 @@ a.blog-author:hover
 	font-weight: bold;
 }
 
-.comment-post
+.comment-author-author
+{
+	color: #A00;
+	font-weight: bold;
+}
+
+.comment-author-user
+{
+	color: #0D2F5E;
+	font-weight: bold;
+}
+
+.comment-post, .comment-post-author, .comment-post-user
 {
 	position: relative;
 	display: block;
@@ -102,4 +114,16 @@ a.blog-author:hover
 	padding: 10px;
 	border: 1px solid #CCC;
 	background: #EEE;
+}
+
+.comment-post-author
+{
+	background: #FFCD8C;
+	border: 1px solid #FFBD66;
+}
+
+.comment-post-user
+{
+	background: #FFDFCC;
+	border: 1px solid #FFC5A3;
 }
