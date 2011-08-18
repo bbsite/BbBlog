@@ -11,6 +11,11 @@
 	{% for blog in blogs %}		
 		<div class="article">
 		
+			<form>
+				<textarea name="content" cols="50" rows="15">
+				This is the content area
+				</textarea>
+			</form>
 			<span class="blogs-title">
 				<a href="../blog/title/{{ blog.slug }}">{{ blog.title }}</a>
 			</span>
