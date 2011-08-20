@@ -14,7 +14,7 @@
 	</span>
 	
 	<span class="blog-subtitle">
-		Published {{ blog.pub_date|date:"l F dS, Y \a\t g:i A" }} by 
+		Published <div class="pub-date">{{ blog.pub_date|date:"l F dS, Y \a\t g:i A" }}</div> by 
 		<a href="" class="blog-author">{{ blog.author }}</a>
 	</span>
 	
@@ -84,6 +84,8 @@
 		    {% render_comment_form for blog %}
 		</div>
 	{% else %}
-	Comments have been disabled for this post
+	<div id="comments-disabled">
+		Comments have been disabled for this article.
+	</div>
 	{% endif %}
 {% endblock %}

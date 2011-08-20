@@ -3,11 +3,11 @@
 	position: relative;
 	clear: both;
 	display: inline-block;
-	border: 1px solid #BBB;
+	border: 1px solid #D7D7D7;
 	padding: 5px 10px;
 	margin: 5px 0 0 10px;
 	width: auto;
-	background: #F6F6F6;
+	background: #EEE;
 }
 
 #comment_form form p label
@@ -29,7 +29,7 @@
 	text-align: left;
 	margin: 0 0 10px 10px;
 	padding: 0 5px;
-	border: 1px solid #CCC;
+	border: 1px solid #D7D7D7;
 	outline: none;
 }
 
@@ -41,7 +41,7 @@
 	height: 100px;
 	margin: 0 0 10px 10px;
 	padding: 5px;
-	border: 1px solid #CCC;
+	border: 1px solid #D7D7D7;
 	outline: none;
 }
 
@@ -50,7 +50,7 @@
 #comment_form form p #id_url:focus,
 #comment_form form p #id_comment:focus
 {
-	border: 1px solid #9FB2BF;	
+	border: 1px solid #9FBFA5;	
 }
 
 #comment_form form p .submit-post,

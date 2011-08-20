@@ -10,7 +10,7 @@ $(document).ready(function (){
 	
 	expand
 		.text('Expand')
-		.css('left', (col1.outerWidth() - expand.outerWidth() - 3) + 'px')
+		.css('left', (col1.outerWidth() - expand.outerWidth() - 5) + 'px')
 		.show();
 	
 	expand.live('click', function(){
@@ -28,14 +28,14 @@ $(document).ready(function (){
 		    complete: function () {
 		    	expand
 	    			.text(vis ? 'Collapse' : 'Expand')
-		    		.css('left', (col1.outerWidth() - expand.outerWidth() - 3) + 'px')
+		    		.css('left', (col1.outerWidth() - expand.outerWidth() - 5) + 'px')
 		    		.animate({opacity:'1.0'}, _fadespeed); 
-		    	}
-		  });
 		
-		if (!vis)
-		{
-			col2.show();
-		}		
+				if (!vis)
+				{
+					col2.show();
+				}	
+	    	}
+		  });	
 	});
 });

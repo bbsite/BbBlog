@@ -4,7 +4,8 @@
 	font-size: 28px;
 	font-weight: bold;
 	text-decoration: none;
-	color: #A00;
+	color: #004B9C;
+	letter-spacing: -2px;
 }
 
 .blog-subtitle
@@ -17,11 +18,19 @@
 
 a.blog-author
 {
-	font-size: 13px;
+	font-size: 15px;
 	font-weight: bold;
 	text-decoration: none;
+	font-style: normal;
 	color: #0D2F5E;
 	display: inline;
+}
+
+.pub-date
+{
+	position: relative;
+	display: inline-block;
+	color: #555F66;
 }
 
 a.blog-author:hover
@@ -35,7 +44,7 @@ a.blog-author:hover
 	margin-top: 10px;
 	display: block;
 	font-size: 15px;
-	padding: 15px 5px;
+	padding: 15px 10px;
 	border: 1px solid #DDD;
 	border-right: 1px solid #AAA;
 	border-bottom: 1px solid #AAA;
@@ -60,14 +69,16 @@ a.blog-author:hover
 	font-size: 13px;
 	color: #1B62C4;	
 	padding: 4px;
-	background: #E9E9E9;
+	background: #EEE;
 	border-radius: 4px;
+	border: 1px solid #D7D7D7;
 }
 
 .blog-tags a:hover
 {
-	background: #C8DCE9;
+	background: #B3C7FF;
 	color: #144991;
+	border: 1px solid #85A5FF;
 }
 
 .comment-count
@@ -114,6 +125,7 @@ a.blog-author:hover
 	padding: 10px;
 	border: 1px solid #CCC;
 	background: #EEE;
+	font-family: Georgia,Helvetica,Arial,sans-serif;
 }
 
 .comment-post-author
@@ -126,4 +138,13 @@ a.blog-author:hover
 {
 	background: #B3C7FF;
 	border: 1px solid #85A5FF;
+}
+
+#comments-disabled
+{
+	position: relative;
+	display: inline-block;
+	padding: 5px;
+	background: #EEE;
+	border: 1px solid #D7D7D7;
 }
