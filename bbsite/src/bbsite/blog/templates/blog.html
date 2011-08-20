@@ -51,7 +51,7 @@
 		{% if not comment.is_removed and comment.is_public %}
 			{% ifequal comment.user blog.author %}
 				<span class="comment-poster">
-					by <span class="comment-author-author">{{ comment.user_name }}</span> on {{ comment.submit_date|date:"l F dS, Y"  }} at {{ comment.submit_date|date:"g:i A" }}: <br/>
+					by <span class="comment-author">{{ comment.user_name }}</span> on {{ comment.submit_date|date:"l F dS, Y"  }} at {{ comment.submit_date|date:"g:i A" }}: <br/>
 				</span>
 				<span class="comment-post-author">
 					{{ comment.comment }}
@@ -59,14 +59,14 @@
 			{% else %}
 				{% if comment.user %}
 					<span class="comment-poster">
-						by <span class="comment-author-user">{{ comment.user_name }}</span> on {{ comment.submit_date|date:"l F dS, Y"  }} at {{ comment.submit_date|date:"g:i A" }}: <br/>
+						by <span class="comment-user">{{ comment.user_name }}</span> on {{ comment.submit_date|date:"l F dS, Y"  }} at {{ comment.submit_date|date:"g:i A" }}: <br/>
 					</span>
-					<span class="comment-post">
+					<span class="comment-post-user">
 						{{ comment.comment }}
 					</span>					
 				{% else %}			
 					<span class="comment-poster">
-						by <span class="comment-author">{{ comment.user_name }}</span> on {{ comment.submit_date|date:"l F dS, Y"  }} at {{ comment.submit_date|date:"g:i A" }}: <br/>
+						by <span class="comment-anon">{{ comment.user_name }}</span> on {{ comment.submit_date|date:"l F dS, Y"  }} at {{ comment.submit_date|date:"g:i A" }}: <br/>
 					</span>
 					<span class="comment-post">
 						{{ comment.comment }}

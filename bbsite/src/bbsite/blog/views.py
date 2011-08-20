@@ -7,7 +7,7 @@ def list_draft_blogs(request):
     return render_to_response('blogs.html', {'blogs': b})
 
 def list_published_blogs(request):
-    b = BlogEntry.objects.filter(status=BlogStatus.is_published)
+    b = BlogEntry.objects.filter(status=BlogStatus.is_published).order_by('-pub_date')
     return render_to_response('blogs.html', {'blogs': b})
 
 def show_published_blog(request, blog_title):

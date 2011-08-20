@@ -4,7 +4,9 @@
 {% block head %}{% endblock %}
 <link rel="stylesheet" type="text/css" href="/static/styles/main.css"></link>
 <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
-
+<script type="text/javascript" src="/static/tinymce/jscripts/tiny_mce/tiny_mce.js" ></script >
+<script type="text/javascript" src="/static/js/jquery.easing.1.3.js" ></script >
+<script type="text/javascript" src="/static/js/common.js" ></script >
 
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>BBSITE - {% block title %}the good stuff{% endblock %}</title>
@@ -18,22 +20,21 @@
 		</div>
 	</div>
 	<div id="doc-wrapper">
-		<div id="container2">
-			<div id="container1">
-				<div id="col1">
-			    	{% block content %}{% endblock %}
-			    </div>
-				<div id="col2">
-					{% load webdesign %}
-					{% lorem 1 %}
-				</div>
-			</div>
+		<div id="col1">
+			<div id="expand-col1"></div>
+	    	{% block content %}{% endblock %}
+	    </div>
+		<div id="col2">
+			{% load webdesign %}
+			{% lorem 1 %}
 		</div>
 		<div id="doc-footer">
 			<div id="doc-footer-content">
 			</div>
 			<div id="doc-footer-copyright">
-				&copy; BBSITE. All Rights Reserved.
+				<div id="doc-footer-copyright-bg">
+					&copy; <b>BBSITE</b>. All Rights Reserved.
+				</div>
 			</div>
 		</div>
 	</div>

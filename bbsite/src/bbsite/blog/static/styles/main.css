@@ -9,31 +9,31 @@
 
 body
 {
-	background: #E8E8E8;	
+	background: #333 url('/static/img/bg.gif');	
 }
 
 #doc-header-wrapper
 {
 	position: relative;
-	background: #92CD00;
-	/*background: #C3D2DB;*/
+	/*background: #92CD00;*/
+	background: #444;
 	/*background: #BAE09D;*/
 	width: 100%;
 	height: 125px;
-	border-bottom: 1px solid #BBB;
+	border-bottom: 1px solid #222;
 }
 
 #doc-header
 {
 	position: relative;
 	float: left;
-	background: #2C6700;
-	/*background: #E8E8E8;*/
+	/*background: #2C6700;*/
+	background: #222;
 	width: 100%;
 	height: 85px;
 	margin-top: 25px;
-	border-top: 1px solid #AAA;
-	border-bottom: 1px solid #BBB;
+	border-top: 1px solid #999;
+	border-bottom: 1px solid #999;
 	border-left: 0px;
 	border-right: 0px;
 }
@@ -52,27 +52,36 @@ body
 
 #doc-header-title #inner
 {
-	color: #111;
+	color: #EEE;
 }
 
 #doc-wrapper
 {
 	position: relative;
 	clear: both;
-	background: #FFF;
 	margin: 10px auto;
 	width: 1000px;
-	border: 1px solid #777;
-	box-shadow: 1px 1px 2px #888;
+	/*box-shadow: 1px 1px 2px #888;*/
 }
 
 /* from http://matthewjamestaylor.com/blog/equal-height-columns-cross-browser-css-no-hacks */
-#container2
+/*#container3
 {
 	position: relative;
 	float: left;
 	width: 1000px;
 	overflow: hidden;
+	border: 1px solid #777;
+	background: #FFF;
+}
+
+#container2
+{
+	position: relative;
+	float: left;
+	width: 1000px;
+	right: 200px;
+	background: #333 url('/static/img/bg.gif');
 }
 
 #container1
@@ -80,40 +89,63 @@ body
 	position: relative;
 	float: left;
 	width: 1000px;
-	right: 200px;
+	right: 10px;
 	border-right: 2px solid #777;
-}
+	background: #FFF;
+}*/
 
 #col1
 {
 	position: relative;
 	float: left;
-	width: 780px;
-	left: 210px;
+	width: 770px;
 	overflow: hidden;
-	padding: 10px 0;
+	padding: 10px;
+	background: #FFF;
+	border: 1px solid #777;
+}
+
+#expand-col1
+{
+	position: absolute;
+	display: none;
+	left: 727px;
+	top: 1px;
+	width: auto;
+	height: auto;
+	padding: 5px;
+	background: #DDD;
+	border: 1px solid #BBB;
+}
+
+#expand-col1:hover
+{
+	background: #CCC;
+	cursor: pointer;
 }
 
 #col2
 {
 	position: relative;
 	float: left;
-	width: 180px;
-	left: 230px; /* 230px because of col1 */
+	width: 176px;
 	overflow: hidden;
-	padding: 10px 0;
+	padding: 10px;
+	background: #FFF;
+	margin: 0 0 0 10px;
+	border: 1px solid #777;
 }
 
 #doc-footer
 {
 	position: relative;
-	background: #2C6700;
+	/*background: #2C6700;*/
 	/*background: #C3D2DB;*/
+	background: inherit;
 	clear: both;
-	border: 1px solid #777;
 	border-left: 0px;
 	border-right: 0px;
-	height: 80px;
+	height: auto;
 	width: auto;
 }
 
@@ -121,18 +153,31 @@ body
 {
 	position: relative;
 	clear: both;
-	height: 60px;
+	height: auto;
 	width: auto;	
+	color: #E9E9E9;
 }
 
-#doc-footer-copyright
+#doc-footer-copyright, #doc-footer-copyright b
 {
 	position: relative;
 	clear: both;
+	padding-top: 5px;
 	height: 20px;
 	line-height: 20px;
 	width: auto;
 	text-align: center;
 	font-family: Baskerville, ‘Times New Roman’, Times, serif;
+	color: #E9E9E9;
 }
 
+#doc-footer-copyright-bg
+{
+	position: relative;
+	display: inline-block;
+	padding: 3px 5px;
+	width: auto;
+	background: #111;
+	color: #888;
+	border-radius: 5px;
+}
