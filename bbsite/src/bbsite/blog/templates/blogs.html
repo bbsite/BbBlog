@@ -1,8 +1,8 @@
 {% extends "base-generic.html" %}
 
 {% block head %}
-<link rel="stylesheet" type="text/css" href="/static/styles/fruity.css"></link>
-<link rel="stylesheet" type="text/css" href="/static/styles/blogs.css"></link>
+<link rel="stylesheet" type="text/css" href="/static/styles/fruity.css">
+<link rel="stylesheet" type="text/css" href="/static/styles/blogs.css">
 {% endblock %}
 
 {% block title %}Recent Entries{% endblock %}
@@ -15,7 +15,7 @@
 			</span>
 			
 			<span class="blogs-subtitle">
-				Published <div class="pub-date">{{ blog.pub_date|date:"F dS, Y" }}</div> by 
+				Published <span class="pub-date">{{ blog.pub_date|date:"F dS, Y" }}</span> by 
 				<a href="" class="blogs-author">{{ blog.author }}</a>
 			</span>
 			
@@ -30,9 +30,18 @@
 				</span>			
 				<span class="blogs-tags">
 					{% for tag in blog.tags.all %}
-						<a href="">{{ tag.name }}</a>{% if not forloop.last %}, {% endif %}
+						<a href="">{{ tag.name }}</a>{% if not forloop.last %} , {% endif %}
 					{% endfor %}
 				</span>
+			</span>
+			
+			{% load comments %}
+			{% get_comment_count for blog as comment_count %}
+			
+			<span class="blogs-comment-count">
+				{% load humanize %}
+		
+				<a href="../blog/title/{{ blog.slug }}#comments">{{ comment_count }} Comment{{ comment_count|pluralize }}</a>
 			</span>
 		</div>
 	{% endfor %}

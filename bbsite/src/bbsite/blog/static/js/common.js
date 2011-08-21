@@ -13,7 +13,7 @@ $(document).ready(function (){
 		.css('left', (col1.outerWidth() - expand.outerWidth() - 5) + 'px')
 		.show();
 	
-	expand.live('click', function(){
+	expand.click(function(){
 		var vis = col2.is(':visible');
 		expand.animate({opacity:'0.0'}, _fadespeed);
 		

@@ -66,7 +66,9 @@ a.blog-author:hover
 .blog-tags a
 {
 	display: inline-block;
-	font-size: 13px;
+	font-size: 14px;
+	font-weight: bold;
+	text-decoration: none;
 	color: #1B62C4;	
 	padding: 4px;
 	background: #EEE;
@@ -76,18 +78,23 @@ a.blog-author:hover
 
 .blog-tags a:hover
 {
-	background: #B3C7FF;
-	color: #144991;
-	border: 1px solid #85A5FF;
+	background: #74B85E;
+	color: #F9F9F9;
+	border: 1px solid #74B85E;
 }
 
-.comment-count
+#comments
 {
 	position: relative;
 	display: block;
-	margin: 15px 0;
+	margin: 5px 0;
 	padding: 15px 0 0 0;
 	border-top: 2px solid #555;
+	font-size: 22px;
+	font-weight: bold;
+	font-style: italic;
+	color: #555;
+	text-decoration: underline;
 }
 
 .comment-poster

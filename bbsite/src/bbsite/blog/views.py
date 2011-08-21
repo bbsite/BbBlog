@@ -1,6 +1,7 @@
 from bbsite.blog.models import BlogEntry, BlogStatus
 from django.shortcuts import render_to_response
 from django.http import Http404
+from django.core.context_processors import csrf
 
 def list_draft_blogs(request):
     b = BlogEntry.objects.filter(status=BlogStatus.is_draft)
@@ -19,5 +20,8 @@ def show_published_blog(request, blog_title):
     except BlogEntry.DoesNotExist:
         raise Http404
     
+    c = {'blog': b}
+    c.update(csrf(request))
+    
     # otherwise we return the blog
-    return render_to_response('blog.html', {'blog': b})
+    return render_to_response('blog.html', c)

@@ -63,6 +63,7 @@ TEMPLATE_LOADERS = (
 )
 
 MIDDLEWARE_CLASSES = (
+    'django.middleware.csrf.CsrfViewMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
@@ -75,6 +76,11 @@ TEMPLATE_DIRS = (
     # Don't forget to use absolute paths, not relative paths.
     '/bbsite/src/bbsite/templates',
     '/bbsite/src/bbsite/blog/templates',
+)
+
+TEMPLATE_CONTEXT_PROCESSORS = (
+    'django.core.context_processors.csrf',
+    'django.core.context_processors.auth', 
 )
 
 INSTALLED_APPS = (
